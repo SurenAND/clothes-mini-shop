@@ -11,6 +11,10 @@ const cartList = [];
 const mainSection = document.querySelector("main");
 mainSection.classList.add("animate__animated", "animate__zoomIn");
 
+window.addEventListener("DOMContentLoaded", () => {
+  renderProducts(products);
+});
+
 function renderProducts(data) {
   mainSection.innerHTML = "";
 
