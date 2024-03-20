@@ -197,3 +197,24 @@ function purchaseBtnClicked(cartList) {
   const cartModalOverlay = document.querySelector(".cart-modal-overlay");
   cartModalOverlay.style.transform = "translateX(-200%)";
 }
+
+function purchaseSuccessfulPopUp() {
+  const psModal = document.querySelector(".purchase-successful-modal");
+  psModal.style.display = "flex";
+  const mainPageSections = document.querySelector(".mainPageSections");
+  mainPageSections.style.display = "none";
+
+  //close modal
+  const close = document.querySelector(".close");
+  close.addEventListener("click", () => {
+    psModal.style.display = "none";
+    mainPageSections.style.display = "block";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === psModal) {
+      psModal.style.display = "none";
+      mainPageSections.style.display = "block";
+    }
+  });
+}
