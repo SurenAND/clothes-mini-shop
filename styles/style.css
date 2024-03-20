@@ -63,3 +63,20 @@ main {
   padding: 3rem;
   border-radius: 1rem;
 }
+
+/* page footer */
+footer {
+  height: 3%;
+  width: 100vw;
+  padding: 0.4rem;
+  background-color: var(--light-gray-color);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+footer h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--extra-dark-gray-color);
+}
