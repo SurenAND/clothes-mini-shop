@@ -181,3 +181,10 @@ function changeTotalPrice() {
   const totalPriceElement = document.querySelector(".total-price");
   totalPriceElement.innerText = totalPrice + "$";
 }
+
+// purchase items
+const purchaseBtn = document.querySelector(".purchase-btn");
+
+purchaseBtn.addEventListener("click", () => {
+  purchaseBtnClicked(cartList);
+});
