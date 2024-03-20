@@ -19,5 +19,9 @@ function renderProducts(data) {
   clothesSection.className = "clothes";
   mainSection.append(clothesSection);
 
-  data.forEach((item) => {});
+  data.forEach((item) => {
+    const productCard = document.createElement("article");
+    productCard.className = "products";
+    productCard.id = `product-${item.id}`;
+  });
 }
