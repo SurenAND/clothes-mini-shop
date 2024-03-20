@@ -216,3 +216,43 @@ footer h4 {
   }
 }
 /* end of cart modal */
+
+/* purchase successful modal  */
+.purchase-successful-modal {
+  padding: 0;
+  margin: 0;
+  background-color: #f5f5f5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.psModalContent {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 30px 70px;
+  button.close {
+    font-size: 20px;
+    color: #c0c5cb;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
