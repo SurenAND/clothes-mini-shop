@@ -97,3 +97,20 @@ function showCart() {
   });
   // end of close cart modal
 }
+
+function addToCartList(productId) {
+  const foundedProduct = products.find((item) => item.id === productId);
+
+  const productInCartIndex = cartList.findIndex(
+    (item) => item.id === productId
+  );
+
+  if (productInCartIndex === -1) {
+    // Product does not exist in Cart
+    cartList.push({ ...foundedProduct, qty: 1 });
+  } else {
+    // Product does exist in Cart
+    cartList[productInCartIndex].qty++;
+  }
+  updateCart(cartList);
+}
