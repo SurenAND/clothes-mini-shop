@@ -13,4 +13,9 @@ mainSection.classList.add("animate__animated", "animate__zoomIn");
 
 function renderProducts(data) {
   mainSection.innerHTML = "";
+
+  // create clothes section
+  const clothesSection = document.createElement("section");
+  clothesSection.className = "clothes";
+  mainSection.append(clothesSection);
 }
