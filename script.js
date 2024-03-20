@@ -14,6 +14,9 @@ mainSection.classList.add("animate__animated", "animate__zoomIn");
 function renderProducts(data) {
   mainSection.innerHTML = "";
 
+  // create cart section
+  createCartSection();
+
   // create clothes section
   const clothesSection = document.createElement("section");
   clothesSection.className = "clothes";
@@ -42,4 +45,26 @@ function renderProducts(data) {
     productCard.append(productImage, orderBtn, priceTag);
     clothesSection.append(productCard);
   });
+}
+
+function createCartSection() {
+  const shoppingCart = document.createElement("section");
+  shoppingCart.className = "shopping-cart";
+  shoppingCart.id = "shopping-cart";
+
+  //create cart counter
+  const cartCounter = document.createElement("span");
+  cartCounter.className = "cartItemCounter";
+  cartCounter.innerText = "0";
+  // create cart icon
+  const cartIcon = document.createElement("img");
+  cartIcon.className = "cart-icon";
+  cartIcon.src = "./assets/images/cart.svg";
+  cartIcon.alt = "Cart Icon";
+  cartIcon.addEventListener("click", () => {
+    showCart();
+  });
+
+  shoppingCart.append(cartCounter, cartIcon);
+  mainSection.append(shoppingCart);
 }
