@@ -114,3 +114,47 @@ function addToCartList(productId) {
   }
   updateCart(cartList);
 }
+
+function updateCart(cList) {
+  const productRow = document.querySelector(".product-row");
+  productRow.innerHTML = "";
+
+  const cartCounter = document.querySelector(".cartItemCounter");
+  let totalQty = 0;
+  cList.forEach((item) => {
+    totalQty += item.qty;
+  });
+  cartCounter.innerText = totalQty;
+
+  cList.forEach((item) => {
+    const productInCart = document.createElement("article");
+
+    const cartImage = document.createElement("img");
+    cartImage.className = "cart-image";
+    cartImage.src = `./assets/images/${item.image}.webp`;
+    cartImage.alt = item.image;
+
+    const cartProductPrice = document.createElement("span");
+    cartProductPrice.className = "cart-price";
+    cartProductPrice.innerText = item.price + "$";
+
+    const cartProductQty = document.createElement("span");
+    cartProductQty.className = "product-quantity";
+    cartProductQty.innerText = "Quantity: " + item.qty;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.className = "remove-btn";
+    removeBtn.innerText = "Remove";
+    removeBtn.addEventListener("click", () => {
+      removeFromCartList(item.id);
+    });
+
+    productInCart.append(
+      cartImage,
+      cartProductPrice,
+      cartProductQty,
+      removeBtn
+    );
+    productRow.append(productInCart);
+  });
+}
