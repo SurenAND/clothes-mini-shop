@@ -21,3 +21,8 @@
   --dark-gray-color: #718093;
   --extra-dark-gray-color: #1f1f1f;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--extra-dark-gray-color);
+}
