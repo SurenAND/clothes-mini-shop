@@ -50,3 +50,16 @@ header h3 {
   font-weight: 600;
   color: var(--extra-dark-gray-color);
 }
+
+/* products section */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  background-color: var(--white-color);
+  padding: 3rem;
+  border-radius: 1rem;
+}
