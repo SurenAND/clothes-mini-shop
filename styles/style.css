@@ -14,3 +14,10 @@
   font-family: Roboto-Light;
   cursor: default;
 }
+
+:root {
+  --white-color: #f5f6fa;
+  --light-gray-color: #dcdde1;
+  --dark-gray-color: #718093;
+  --extra-dark-gray-color: #1f1f1f;
+}
