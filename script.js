@@ -158,3 +158,13 @@ function updateCart(cList) {
     productRow.append(productInCart);
   });
 }
+
+function removeFromCartList(productId) {
+  const productIndex = cartList.findIndex((item) => item.id === productId);
+
+  if (productIndex !== -1) {
+    cartList.splice(productIndex, 1);
+    changeTotalPrice();
+    updateCart(cartList);
+  }
+}
