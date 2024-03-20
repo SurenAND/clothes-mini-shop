@@ -5,3 +5,5 @@ const products = [
   { id: 4, price: "560", image: "image-4" },
   { id: 5, price: "1150", image: "image-5" },
 ];
+
+const cartList = [];
