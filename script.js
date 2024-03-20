@@ -168,3 +168,16 @@ function removeFromCartList(productId) {
     updateCart(cartList);
   }
 }
+
+function changeTotalPrice() {
+  let total = 0;
+  let totalPrice = 0;
+
+  cartList.forEach((item) => {
+    total += item.qty;
+    totalPrice += item.qty * parseInt(item.price);
+  });
+
+  const totalPriceElement = document.querySelector(".total-price");
+  totalPriceElement.innerText = totalPrice + "$";
+}
