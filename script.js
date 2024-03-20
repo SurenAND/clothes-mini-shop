@@ -37,5 +37,9 @@ function renderProducts(data) {
     const priceTag = document.createElement("span");
     priceTag.className = "price";
     priceTag.innerText = item.price + "$";
+
+    // append them to page
+    productCard.append(productImage, orderBtn, priceTag);
+    clothesSection.append(productCard);
   });
 }
