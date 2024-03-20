@@ -18,4 +18,6 @@ function renderProducts(data) {
   const clothesSection = document.createElement("section");
   clothesSection.className = "clothes";
   mainSection.append(clothesSection);
+
+  data.forEach((item) => {});
 }
