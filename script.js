@@ -27,5 +27,11 @@ function renderProducts(data) {
     const productImage = document.createElement("img");
     productImage.src = `./assets/images/${item.image}.webp`;
     productImage.alt = `Product ${item.id}`;
+
+    const orderBtn = document.createElement("button");
+    orderBtn.innerText = "Order now!";
+    orderBtn.addEventListener("click", (e) => {
+      addToCartList(+e.target.closest(".products").id.split("-")[1]);
+    });
   });
 }
