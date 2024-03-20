@@ -188,3 +188,12 @@ const purchaseBtn = document.querySelector(".purchase-btn");
 purchaseBtn.addEventListener("click", () => {
   purchaseBtnClicked(cartList);
 });
+
+function purchaseBtnClicked(cartList) {
+  purchaseSuccessfulPopUp();
+  cartList.splice(0, cartList.length);
+  updateCart(cartList);
+  changeTotalPrice();
+  const cartModalOverlay = document.querySelector(".cart-modal-overlay");
+  cartModalOverlay.style.transform = "translateX(-200%)";
+}
