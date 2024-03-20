@@ -256,3 +256,84 @@ footer h4 {
     font-weight: 600;
   }
 }
+
+/* cart section and icon */
+.shopping-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 100%;
+  margin-right: 2rem;
+  transition: 500ms;
+}
+
+.shopping-cart:hover {
+  transform: scale(1.1);
+}
+
+.cart-icon {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.shopping-cart .cartItemCounter {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: tomato;
+  color: whitesmoke;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* products */
+.products {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products:hover button {
+  transform: translateX(0px);
+}
+
+.products button {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 65%;
+  padding: 0.5em 1em;
+  transform: translateX(130px);
+  transition: 0.5s ease;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.clothes {
+  overflow: hidden;
+  text-align: center;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.clothes img {
+  max-width: 200px;
+  border-radius: 1rem;
+  background-color: var(--light-gray-color);
+}
