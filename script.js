@@ -33,5 +33,9 @@ function renderProducts(data) {
     orderBtn.addEventListener("click", (e) => {
       addToCartList(+e.target.closest(".products").id.split("-")[1]);
     });
+
+    const priceTag = document.createElement("span");
+    priceTag.className = "price";
+    priceTag.innerText = item.price + "$";
   });
 }
