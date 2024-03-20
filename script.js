@@ -23,5 +23,9 @@ function renderProducts(data) {
     const productCard = document.createElement("article");
     productCard.className = "products";
     productCard.id = `product-${item.id}`;
+
+    const productImage = document.createElement("img");
+    productImage.src = `./assets/images/${item.image}.webp`;
+    productImage.alt = `Product ${item.id}`;
   });
 }
